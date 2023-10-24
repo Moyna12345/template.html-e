@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color:rgb(241, 130, 86);
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 5px 5px 10px rgb(0, 52, 223);
+        }
+        .container h1{
+            color: rgb(0, 0, 0);
+        }
+        .container p{
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div id="user-container">
+
+    </div>
+    <script>
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then(res => res.jsom())
+        .then(data => showUserNames(data));
+
+        function showUserNames(data){
+            let usersHTML = '';
+            data.forEach(user => {
+                usersHTML = usersHTML +  `<div class="user">
+                    <h2>${user.name}</h2>
+                     <p>Email: ${user.email}</p>
+                     <p>${user.company.name}. ${user.company.catchPhrase}. ${user.company.bs}</p>
+                     </div>`
+            });
+            const userContainer = document.getElementById('user-container');
+            userContainer.innerHTML = usersHTML;
+        }
+    </script>
+    <div class="container">
+        <h1>Leanne Graham</h1>
+        <h3>Email: Sincere@april.biz</h3>
+        <p>Romaguera-Crona.Muiti-layeld client-servel-net.harness real-time e-marketsKeebler LLC",
+            "catchPhrase": "User-centric fault-tolerant solution",
+            "bs": "revolutionize end-to-end systems"</p>
+   </div>
+
+   <div class="container">
+    <h1>Leanne Graham</h1>
+    <h3>Email: Shanna@melissa.tv</h3>
+    <p> "Deckow-Crist",
+        "catchPhrase": "Proactive didactic contingency",
+        "bs": "synergize scalable supply-chainsKeebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"</p>
+</div>
+
+<div class="container">
+    <h1>Clementine Bauch</h1>
+    <h3>Email: Nathan@yesenia.net</h3>
+    <p>Romaguera-Jacobson",
+        "catchPhrase": "Face to face bifurcated interface",
+        "bs": "e-enable strategic applicationsKeebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"</p>
+</div>
+
+<div class="container">
+    <h1>Patricia Lebsack</h1>
+    <h3>Email: Julianne.OConner@kory.org</h3>
+    <p>"Robel-Corkery",
+        "catchPhrase": "Multi-tiered zero tolerance productivity",
+        "bs": "transition cutting-edge web services"Keebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"</p>
+</div>
+
+<div class="container">
+    <h1>Chelsey Dietrich</h1>
+    <h3>Email: Lucio_Hettinger@annie.ca</h3>
+    <p>Keebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"Keebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"</p>
+</div>
+
+<div class="container">
+    <h1>Mrs. Dennis Schulist</h1>
+    <h3>Email: Karley_Dach@jasper.info</h3>
+    <p>"Considine-Lockman",
+        "catchPhrase": "Synchronised bottom-line interface",
+        "bs": "e-enable innovative applications"Keebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"</p>
+</div>
+
+<div class="container">
+    <h1>Clementine Bauch</h1>
+    <h3>Email: Nathan@yesenia.net</h3>
+    <p>Romaguera-Jacobson",
+        "catchPhrase": "Face to face bifurcated interface",
+        "bs": "e-enable strategic applicationsKeebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"</p>
+</div>
+
+<div class="container">
+    <h1>Patricia Lebsack</h1>
+    <h3>Email: Julianne.OConner@kory.org</h3>
+    <p>"Robel-Corkery",
+        "catchPhrase": "Multi-tiered zero tolerance productivity",
+        "bs": "transition cutting-edge web services"Keebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"</p>
+</div>
+
+<div class="container">
+    <h1>Chelsey Dietrich</h1>
+    <h3>Email: Lucio_Hettinger@annie.ca</h3>
+    <p>Keebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"Keebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"</p>
+</div>
+<div class="container">
+      <h1>Chelsey Dietrich</h1>
+      <h3>Email: Lucio_Hettinger@annie.ca</h3>
+      <p>Keebler LLC catchphrase user-centric
+         fault-tolerant solutio bs revolutionize end-to-end systems 
+         keebler llc catchphrase user centric fault-tolerant soltionb bs revolutionize end-to-end systems</p>
+</div>
+    <h1 class=""></h1>
+</body>
+</html>
